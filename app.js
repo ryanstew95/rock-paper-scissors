@@ -2,6 +2,8 @@ const computerChoiceDisplay = document.getElementById('computer-choice');
 const userChoiceDisplay = document.getElementById('your-choice');
 const resultDisplay = document.getElementById('result');
 const possibleChoices = document.querySelectorAll('button');
+const resetButton = document.getElementById('reset');
+
 let userChoice
 let computerChoice
 let result
@@ -12,6 +14,15 @@ possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click
   generateComputerChoice()
   getResult()
 }));
+
+resetButton.addEventListener('click', () => {
+  userChoiceDisplay.innerHTML = '';
+  computerChoiceDisplay.innerHTML = '';
+  resultDisplay.innerHTML = '';
+  userChoice = null;
+  computerChoice = null;
+  result = null;
+});
 
 function generateComputerChoice() {
   const randomNumber = Math.floor(Math.random() * 3) + 1
