@@ -4,13 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rock Paper Scissors</title>
+  <style>
+    img {
+      max-width: 100px;
+      max-height: 100px;
+    }
+  </style>
 </head>
 <body>
   <h2>Rock Paper Scissors</h2>
   <p>Computer Choice: <span id="computer-choice"></span></p>
   <p>Your Choice: <span id="your-choice"></span></p>
-  <h2>Result: <span id="result"></span></h2>
+  <img id="computer-choice-img" alt="Computer Choice Image">
+  <img id="user-choice-img" alt="Your Choice Image">
 
+  <h2>Result: <span id="result"></span></h2>
+ 
   <button id="rock">rock</button>
   <button id="paper">paper</button>
   <button id="scissors">scissors</button>
